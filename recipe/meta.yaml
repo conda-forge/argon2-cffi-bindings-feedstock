@@ -10,7 +10,9 @@ source:
   sha256: "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c55661c6459651fc39e3"
 
 build:
-  number: 2
+  number: 3
+  script_env:
+    - ARGON2_CFFI_USE_SSE2=0  # [not x86_64]
   script:
     - ln -sf $RANLIB $BUILD_PREFIX/bin/ranlib  # [unix]
     - {{ PYTHON }} -m pip install . -vv
