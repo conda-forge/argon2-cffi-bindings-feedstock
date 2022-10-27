@@ -11,6 +11,8 @@ source:
 
 build:
   number: 3
+  script_env:
+    - ARGON2_CFFI_USE_SSE2=0  # [not x86_64]
   script:
     - ln -sf $RANLIB $BUILD_PREFIX/bin/ranlib  # [unix]
     - {{ PYTHON }} -m pip install . -vv
