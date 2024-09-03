@@ -10,7 +10,7 @@ source:
   sha256: "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c55661c6459651fc39e3"
 
 build:
-  number: 4
+  number: 5
   script_env:
     - ARGON2_CFFI_USE_SSE2=0  # [not x86_64]
   script:
@@ -23,6 +23,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cffi >=1.0.1                           # [build_platform != target_platform]
     - {{ compiler("c") }}
+    - {{ stdlib("c") }}
 
   host:
     - python
