@@ -22,7 +22,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cffi >=1.0.1                           # [py < 314 and build_platform != target_platform]
-    - cffi>=2.0.0b1                          # [py >= 314 and build_platform != target_platform]
+    - cffi >=2.0.0b1                         # [py >= 314 and build_platform != target_platform]
     - {{ compiler("c") }}
     - {{ stdlib("c") }}
 
@@ -30,7 +30,7 @@ requirements:
     - python
     - pip
     - cffi >=1.0.1                           # [py < 314]
-    - cffi>=2.0.0b1                          # [py >= 314]
+    - cffi >=2.0.0b1                         # [py >= 314]
     - setuptools >=45
     - setuptools_scm >=6.2
     - wheel
@@ -38,7 +38,7 @@ requirements:
   run:
     - python
     - cffi >=1.0.1                           # [py < 314]
-    - cffi>=2.0.0b1                          # [py >= 314]
+    - cffi >=2.0.0b1                         # [py >= 314]
 
 test:
   imports:
