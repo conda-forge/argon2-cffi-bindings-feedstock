@@ -10,7 +10,7 @@ source:
   sha256: "b957f3e6ea4d55d820e40ff76f450952807013d361a65d7f28acc0acbf29229d"
 
 build:
-  number: 0
+  number: 1
   script_env:
     - ARGON2_CFFI_USE_SSE2=0  # [not x86_64]
   script:
