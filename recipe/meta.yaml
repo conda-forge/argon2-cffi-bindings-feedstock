@@ -1,5 +1,5 @@
 {% set name = "argon2-cffi-bindings" %}
-{% set version = "26.1.0" %}
+{% set version = "26.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: "63505c71542a44b68b1e38060450fb006404170da375feb31af153e7f9c6205d"
+  sha256: "f21ab89bb9850f32b9ca038d9961424bb0d3669d579cbbbfed068cffa6fc0643"
 
 build:
-  number: 3
+  number: 0
   script_env:
     - ARGON2_CFFI_USE_SSE2=0  # [not x86_64]
   script:
